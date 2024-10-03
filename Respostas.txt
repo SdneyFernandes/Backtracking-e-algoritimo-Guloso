@@ -1,0 +1,34 @@
+ Exercício 1: Consegue calcular o fatorial de um número acima de 100 com uma solução recursiva? Justifique sua resposta.
+
+ Sim, é possível calcular o fatorial de um número maior que 100 usando recursão, mas não é eficiente.
+
+A recursão envolve uma série de chamadas de função que vão empilhando à medida que o valor  diminui até chegar à condição de parada.
+Para calcular  recursivamente, seriam feitas 100 chamadas da função. Em teoria, isso funciona, mas o problema é a limitação da pilha de execução do Java.
+
+
+
+Exercício 2: Consegue calcular o fatorial de um número acima de 100 com uma solução de programação dinâmica? Justifique sua resposta.
+
+Sim, a programação dinâmica pode calcular o fatorial de um número maior que 100 de forma eficiente.
+
+ Ao usar programação dinâmica, não fazemos várias chamadas recursivas. Em vez disso, usamos um array (ou uma variável acumuladora) para armazenar os resultados intermediários e calcular progressivamente o fatorial de números grandes.
+Na abordagem bottom-up, por exemplo, calculamos o fatorial de números menores primeiro e vamos acumulando os resultados até o valor desejado. Isso consome muito menos memória, já que não há pilha de chamadas como na recursão.
+
+
+Exercício 3: Calcule a complexidade de tempo das soluções da série de Fibonacci e compare as duas. Por que a solução feita com programação dinâmica é melhor?
+
+Solução Recursiva para Fibonacci:
+
+A solução recursiva simples para calcular a série de Fibonacci, recalcula os mesmos valores várias vezes.
+
+ A complexidade de tempo desta abordagem é exponencial, porque a função chama a si mesma duas vezes para cada valor, recalculando muitas vezes o mesmo número de Fibonacci.
+Usando programação dinâmica (memoization ou abordagem bottom-up), evitamos recalcular os mesmos valores, armazenando os resultados intermediários.
+
+Complexidade de Tempo:
+ Tanto a abordagem top-down (memoization) quanto a abordagem bottom-up têm complexidade de tempo linear. Cada número de Fibonacci é calculado uma única vez e armazenado, sem repetição de cálculos.
+
+Por que a Programação Dinâmica é Melhor?
+Eficiência: A solução dinâmica armazena os resultados já calculados, evitando o recalculo. Isso transforma uma solução exponencial em uma solução linear, o que é uma diferença enorme em termos de desempenho, especialmente para valores grandes de.
+
+Menor uso de memória e tempo: Em vez de recalcular várias vezes, calculamos apenas uma vez e reutilizamos o valor. Isso economiza tempo e evita problemas de desempenho em valores altos.
+
